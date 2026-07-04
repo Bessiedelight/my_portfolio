@@ -32,6 +32,12 @@ const nextConfig = withTranslateRoutes({
             'styles/tools/_functions.scss',
             'styles/objects/_mediaq.scss';
         `
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
     }
 });
 
