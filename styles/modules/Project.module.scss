@@ -1,0 +1,73 @@
+/* ==========================================================================
+    Project
+========================================================================== */
+
+.c-project {
+    --links-margin-t: 20px;
+    --links-gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 0 var(--grid-gap-columns);
+    align-items: start;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+
+    &__title {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
+    }
+
+    &__body {
+        grid-column: 1 / -1;
+    }
+
+    &__description {
+        /* Inherits from body */
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--links-gap);
+        margin-top: var(--links-margin-t);
+    }
+
+    // **---------------------------------------------------**
+    // MEDIA QUERIES
+
+    @include mediaq('>MD') {
+        padding: 48px 0;
+
+        &__title {
+            grid-column: 1 / 6;
+            margin-bottom: 0;
+        }
+
+        &__body {
+            grid-column: 6 / 13;
+        }
+    }
+
+    @include mediaq('>LG') {
+        padding: 56px 0;
+
+        &__title {
+            grid-column: 1 / 5;
+        }
+
+        &__body {
+            grid-column: 5 / 11;
+        }
+    }
+
+    @include mediaq('>XXLG') {
+        padding: 64px 0;
+    }
+}
+
+[data-theme='dark'] {
+    .c-project {
+        --color-border: rgba(255, 255, 255, 0.08);
+    }
+}

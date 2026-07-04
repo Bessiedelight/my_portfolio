@@ -1,0 +1,66 @@
+/* ==========================================================================
+    Home Featured Project
+========================================================================== */
+
+.c-homeFeaturedProject {
+    --project-margin-t: 70px;
+    --btn-margin-t: 45px;
+    --divider-spacing: 30px;
+
+    &__divider {
+        width: 100%;
+        margin-bottom: var(--divider-spacing);
+
+        &--line {
+            width: 100%;
+            height: 1px;
+            background: var(--body-heading-color);
+            opacity: 0.12;
+        }
+    }
+
+    &__header {
+        margin-bottom: 15px;
+    }
+
+    &__index {
+        grid-column: 1 / 1;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__title {
+        grid-column: 3 / -1;
+    }
+
+    &__project {
+        margin-top: var(--project-margin-t);
+    }
+
+    &__btn {
+        margin-top: var(--btn-margin-t);
+    }
+
+    // **---------------------------------------------------**
+    // MEDIA QUERIES
+
+    @include mediaq('>MD') {
+        --project-margin-t: 120px;
+        --btn-margin-t: 65px;
+        --divider-spacing: 50px;
+
+        &__header {
+            margin-bottom: 25px;
+        }
+
+        &__title {
+            grid-column: 4 / 7;
+        }
+    }
+
+    @include mediaq('>LG') {
+        --divider-spacing: 65px;
+    }
+}

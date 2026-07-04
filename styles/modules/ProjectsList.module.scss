@@ -1,0 +1,21 @@
+/* ==========================================================================
+    Projects List
+========================================================================== */
+
+.c-projectsList {
+    &__list {
+        border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+    }
+
+    &__item {
+        /* Items are separated by the border-bottom on each .c-project */
+    }
+}
+
+[data-theme='dark'] {
+    .c-projectsList {
+        &__list {
+            --color-border: rgba(255, 255, 255, 0.08);
+        }
+    }
+}

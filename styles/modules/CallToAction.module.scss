@@ -1,0 +1,54 @@
+/* ==========================================================================
+    Call to action
+========================================================================== */
+
+.c-callToAction {
+    --grid-gap-row: 0;
+    --link-margin-t: 70px;
+    --divider-spacing: 30px;
+
+    &__divider {
+        width: 100%;
+        margin-bottom: var(--divider-spacing);
+
+        &--line {
+            width: 100%;
+            height: 1px;
+            background: var(--body-heading-color);
+            opacity: 0.12;
+        }
+    }
+
+    &__index {
+        grid-column: 1 / 1;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__title {
+        grid-column: 3 / -1;
+    }
+
+    &__link {
+        margin-top: var(--link-margin-t);
+        grid-column: 1 / -1;
+    }
+
+    // **---------------------------------------------------**
+    // MEDIA QUERIES
+
+    @include mediaq('>MD') {
+        --link-margin-t: 120px;
+        --divider-spacing: 50px;
+
+        &__title {
+            grid-column: 4 / 7;
+        }
+    }
+
+    @include mediaq('>LG') {
+        --divider-spacing: 65px;
+    }
+}
