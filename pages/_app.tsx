@@ -88,7 +88,7 @@ const App: React.FC<AppPropsWithLayout> = ({ Component, pageProps }) => {
 
     return (
         <>
-            <ThemeProvider disableTransitionOnChange>
+             <ThemeProvider defaultTheme="light" disableTransitionOnChange>
                 <MetaData {...metaData} />
                 {isLoading &&
                     <Loader setIsLoading={setIsLoading} setIsReady={setIsReady} />
